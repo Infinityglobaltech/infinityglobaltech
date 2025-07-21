@@ -3,9 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
+    <script>
+      window.CMS_MANUAL_INIT = true; // Tell CMS not to auto-init
+    </script>
   </head>
   <body>
-    <!-- This is where Netlify CMS loads -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script>
+      // Manually initialize CMS with the correct config path
+      CMS.init({
+        config: {
+          config_file: 'config.yml' // This tells it to look in the same directory
+        }
+      });
+    </script>
   </body>
 </html>
