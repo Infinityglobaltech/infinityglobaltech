@@ -3,29 +3,40 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
+
+    <!-- Identity widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- CMS script -->
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
+
     <script>
       window.CMS_MANUAL_INIT = true; // Tell CMS not to auto-init
     </script>
   </head>
-  <body>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+  <body>
     <script>
-      // Manually initialize CMS with the correct config path
+      // Initialize CMS manually with config.yml in this folder
       CMS.init({
         config: {
-          config_file: 'config.yml' // This tells it to look in the same directory
+          load_config_file: true,
+          config_file: "config.yml"
         }
       });
     </script>
+
     <script>
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.init();
-        window.netlifyIdentity.on("login", () => {
-          window.location.href = "/admin/";
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
+        window.netlifyIdentity.init();
       }
     </script>
-    
   </body>
 </html>
