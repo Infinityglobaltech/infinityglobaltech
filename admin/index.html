@@ -3,39 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
-
-    <!-- Identity widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <!-- CMS script -->
-    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
-
     <script>
-      window.CMS_MANUAL_INIT = true; // Tell CMS not to auto-init
+      window.CMS_MANUAL_INIT = true; // Prevent auto-init
     </script>
+
+    <!-- Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- CMS Core -->
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
   </head>
 
   <body>
+    <!-- CMS Mount Point -->
+    <div id="nc-root"></div>
+
+    <!-- Init CMS -->
     <script>
-      // Initialize CMS manually with config.yml in this folder
       CMS.init({
         config: {
           load_config_file: true,
-          config_file: "config.yml"
+          config_file: 'config.yml'
         }
       });
     </script>
 
+    <!-- Identity Listener -->
     <script>
       if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
         window.netlifyIdentity.init();
+        window.netlifyIdentity.on("login", () => {
+          window.location.href = "/admin/";
+        });
       }
     </script>
   </body>
