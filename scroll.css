@@ -1,0 +1,42 @@
+.feature-card {
+    scroll-snap-align: start;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    perspective: 1000px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    max-width: 320px;
+    min-width: 280px;
+    /* Avoid overflow on expansion */
+    overflow: visible;
+    background-color: white;
+  }
+  
+  .feature-card:hover {
+    transform: scale(1.1);
+    z-index: 20;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Reveal descriptive content */
+  .feature-details {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    overflow: hidden;
+  }
+  
+  .feature-card:hover .feature-details {
+    max-height: 500px;
+    opacity: 1;
+  }
+  
+  /* Prevent text selection on drag */
+  .horizontal-scroll,
+  .feature-card {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us| Infinity Global Tech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="Script/index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styel.css" />
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /> -->
+</head>
+
+<body class="font-sans bg-gray-100 text-gray-800">
+  <!-- whatsapp -->
+  <a href="https://wa.me/+916352540917" target="_blank" id="whatsappButton"
+    class="fixed bottom-10 w-18 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-opacity duration-300 opacity-100 justify-center">
+    <i class="fab fa-whatsapp text-4xl ml-1"></i>
+  </a>
+  <!-- Loader -->
+  <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+    <img src="./Resources/infinity_logo.gif" alt="Loading..." class="w-20 h-20" />
+  </div>
+  <!-- Navbar -->
+  <header class="bg-white w-full shadow z-30">
+    <div class="w-full bg-gray-100 py-3 relative z-10 ">
+      <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center bg-white rounded-full shadow-md px-6 py-3">
+    
+          <!-- Logo -->
+          <a class="flex items-center text-blue-700" href="index.html">
+            <img src="./Resources/Logo/global.png" alt="Infinity Tech Logo"
+                 class="w-14 h-14 rounded-full p-1 bg-gray-200" />
+            <span class="ml-3 text-xl font-bold text-gray-700">Infinity Global Tech</span>
+          </a>
+    
+          <!-- Navigation Links -->
+          <nav class="hidden md:flex space-x-6 text-base">
+            <a href="index.html"
+               class="text-gray-800 font-semibold border-b-2 border-transparent hover:border-blue-700">Home</a>
+            <a href="portfolio.html"
+               class="text-gray-800 font-semibold border-b-2 border-transparent hover:border-blue-700">Portfolio</a>
+            <a href="about.html"
+               class="text-gray-800 font-semibold border-b-2 border-transparent hover:border-blue-700">About us</a>
+            <a href="contect.html"
+               class="text-gray-800 font-semibold border-b-2 border-transparent hover:border-blue-700">Contact us</a>
+          </nav>
+    
+          <!-- Hamburger for Mobile -->
+          <button onclick="openSidebar()" class="md:hidden focus:outline-none">
+            <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+    
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar (Mobile Menu) -->
+  <div id="sidebar" class="fixed top-0 right-0 h-full w-[17rem] bg-gray-900 to-black opacity-96 shadow-xl transform translate-x-full transition-transform duration-500 z-50 rounded-l-2xl overflow-hidden">
+    <div class="relative z-10 h-full flex flex-col">
+      <!-- Header -->
+      <div class="flex justify-between items-center px-6 py-6 border-b border-gray-700">
+        <span class="text-2xl font-bold text-gray-200 tracking-wide">MENU</span>
+        <button onclick="closeSidebar()" class="text-gray-200 text-3xl hover:text-yellow-300 transition-all duration-300 transform hover:rotate-90">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+  
+      <!-- Navigation -->
+      <nav class="flex-1 flex flex-col px-6 py-4 sgap-10 overflow-y-auto">
+        <a href="index.html" class="flex items-center text-gray-200 hover:text-yellow-300 py-3 transition">
+          <i class="fas fa-home mr-4 text-lg"></i>
+          <span class="text-lg font-medium">Home</span>
+        </a>
+        <a href="portfolio.html" class="flex items-center text-gray-200 hover:text-yellow-300 py-3 transition">
+          <i class="fas fa-briefcase mr-4 text-lg"></i>
+          <span class="text-lg font-medium">Portfolio</span>
+        </a>
+        <a href="about.html" class="flex items-center text-gray-200 hover:text-yellow-300 py-3 transition">
+          <i class="fas fa-user-circle mr-4 text-lg"></i>
+          <span class="text-lg font-medium">About Us</span>
+        </a>
+        <a href="contect.html" class="flex items-center text-gray-200 hover:text-yellow-300 py-3 transition">
+          <i class="fas fa-envelope mr-4 text-lg"></i>
+          <span class="text-lg font-medium">Contact Us</span>
+        </a>
+  
+        <!-- Divider -->
+        <div class="border-t border-gray-700 my-2"></div>
+  
+        <!-- Social Links -->
+        <div class="flex justify-center gap-4 pt-4">
+          <a href="https://youtube.com/@infinityglobaltech?si=w8SBRFIqylyQGUje" class="text-gray-400 hover:text-yellow-300 transition">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.instagram.com/infinityglobaltech_official?igsh=NnZtODlxaThsbWZ2" class="text-gray-400 hover:text-yellow-300 transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/916352540917" class="text-gray-400 hover:text-yellow-300 transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/infinity-global-tech-472318371/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-400 hover:text-yellow-300 transition">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </nav>
+  
+      <!-- Footer -->
+      <div class="px-6 py-4 text-center text-gray-500 text-sm">
+        © 2025 Infinity Tech
+      </div>
+    </div>
+  </div>
+
+
+  <!-- About Section -->
+  <div class="w-full overflow-hidden leading-none ">
+    <svg class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,160L48,149.3C96,139,192,117,288,128C384,139,480,181,576,181.3C672,181,768,139,864,112C960,85,1056,75,1152,90.7C1248,107,1344,149,1392,170.7L1440,192L1440,320L0,320Z" />
+    </svg>
+  </div>
+
+  <section id="about" class="py-10 bg-white  ml-3">
+    <div class="container mx-auto px-6">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our<span class="gradient-text">Story</span></h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
+      </div>
+      <div class="flex flex-col md:flex-row items-center mb-12">
+        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+          <img src="./Resources/foundation.gif" alt="Our Beginnings" class="w-full max-w-md mx-auto">
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold mb-4">How It All Began</h3>
+          <p class="text-gray-600 mb-6">Infinity Global Tech began as a personal vision to help brands grow in the
+            digital world.
+            With a strong passion for design and technology, I started this journey independently —
+            aiming to provide creative and effective digital solutions to businesses that want to make an impact online.
+            What started as a one-person idea has grown into a platform for delivering real value to clients through
+            design, web, and marketing services.</p>
+          <p class="text-gray-600 mb-6">What began as a boutique agency has since grown into an award-winning
+            firm with clients across four continents. Our journey has been driven by curiosity, innovation,
+            and an unwavering commitment to delivering exceptional results for our clients.</p>
+          <div class="flex flex-wrap gap-4 mt-8">
+            <div class="flex items-center">
+              <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                <i class="fas fa-laptop-house text-purple-500"></i>
+              </div>
+              <span class="font-medium">100% Remote Operations</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                <i class="fas fa-globe text-purple-500"></i>
+              </div>
+              <span class="font-medium">Global Presence</span>
+            </div>
+            <div class="flex items-center">
+              <div class="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                <i class="fas fa-heart text-pink-500"></i>
+              </div>
+              <span class="font-medium">Client-Focused</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="md:flex md:flex-row-reverse items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+          <img src="./Resources/about-us-page.webp" alt="Our Approach" class="w-full max-w-md mx-auto">
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl font-bold mb-4">Our Approach Today</h3>
+          <p class="text-gray-600 mb-6">At Infinity Global Tech, the approach is simple yet effective: blend creativity
+            with purpose. Every project starts by understanding the client's unique needs and ends with a solution that
+            not only looks impressive but also drives results.
+            As a modern digital marketing startup, I focus on clarity, customization, and consistency. Instead of
+            following trends blindly, I build strategies rooted in your brand’s identity—ensuring everything from logos
+            to websites to digital campaigns feels truly aligned.</p>
+          <p class="text-gray-600 mb-6">The goal isn’t just to make things look good, but to make them work smart —
+            reaching the right audience, at the right time, with the right message.</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Integrated digital marketing strategies</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Proprietary analytics and reporting</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Creative that converts</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+              <span>Continuous optimization</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave divider -->
+  <div class="wave-divider bg-white">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#f9fafb" fill-opacity="2"
+        d="M0,256L48,261.3C96,267,192,277,288,256C384,235,480,181,576,154.7C672,128,768,128,864,149.3C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+  <!-- Footer Section  -->
+  <footer class="bg-gray-900 text-white py-12 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+      <!-- Branding & Description -->
+      <div>
+        <h1 class="text-2xl font-bold flex items-center gap-2">
+          <!-- Logo Image -->
+          <img src="./Resources/Logo/global.png" alt="Infinity Tech Logo" class="w-20 h-20 rounded-full e p-1" />
+
+          <!-- Brand Name with optional typing effect -->
+          Infinity Global Tech<span class="text-yellow-400 typewriter"></span>
+        </h1>
+
+        <p class="mt-4 font-semibold">
+          We are committed to delivering exceptional work with precision, on-time delivery, and transparent
+          communication.
+          Your goals drive our process, and your satisfaction is our top priority.
+        </p>
+        <p class="mt-4 text-sm">🌐 India</p>
+      </div>
+
+
+      <!-- Location -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Location</h3>
+        <p class="text-sm mb-2">
+          208 New shakti vijay soc , hirabag , varachha road , surat
+        </p>
+        <p class="text-sm">
+          Gujarat - 395006
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+        <p class="text-base font-bold mb-2">📞 +91 63525 40917</p>
+        <p class="text-base font-bold mb-2">📧 <a href="mailto:info.infinityglobaltech@gmail.com" class="hover:underline">info.infinityglobaltech@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- Call To Action -->
+    <div class="text-center mt-10">
+      <p class="text-yellow-400 font-bold uppercase">We are also on</p>
+      <div class="flex justify-center gap-6 mt-5">
+        <!-- Social Media Section -->
+        
+          <a href="https://www.facebook.com/share/15gsubb944/?mibextid=qi2Omg" target="_blank"
+            class="text-white hover:text-blue-500 text-2xl transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/916352540917" target="_blank"
+            class="text-white hover:text-blue-400 text-2xl transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/infinityglobaltech_official?igsh=NnZtODlxaThsbWZ2" target="_blank"
+            class="text-white hover:text-pink-500 text-2xl transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/infinity-global-tech-472318371/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank" class="text-white hover:text-blue-700 text-2xl transition">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://youtube.com/@infinityglobaltech?si=w8SBRFIqylyQGUje" target="_blank"
+            class="text-white hover:text-red-600 text-2xl transition">
+            <i class="fab fa-youtube"></i>
+          </a>
+
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="mt-10 text-center text-sm text-gray-300 border-t border-gray-600 pt-4">
+      <p>2025 © Infinity Global Te. All Rights Reserved.</p>
+      <p class="mt-1">Coded By <a href="#" class="text-yellow-300 underline">Leo Tech</a></p>
+    </div>
+  </footer>
+  </body>
+  </html>
